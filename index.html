@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR" class="music-app">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d1010"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="description" content="Seu som, seu espaço. Busque músicas no YouTube e organize suas favoritas com o 4uMusic, da 4u-Labs.">
+  <title>4uMusic — Seu som, seu espaço</title>
+  <link rel="icon" href="assets/pwa-icon-192.png" type="image/png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png"><link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="styles.css?v=20261013-5">
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+<svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+ <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H3zM9 20v-7h6v7"/></symbol>
+ <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+ <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.5 4.5a5 5 0 0 0-7 0L12 6l-1.5-1.5a5 5 0 0 0-7 7L12 20l8.5-8.5a5 5 0 0 0 0-7Z"/></symbol>
+ <symbol id="i-list" viewBox="0 0 24 24"><path d="M4 5h16M4 11h10M4 17h10m4-3 4 3-4 3z"/></symbol>
+ <symbol id="i-library" viewBox="0 0 24 24"><rect x="3" y="4" width="4" height="16" rx="1"/><rect x="10" y="4" width="4" height="16" rx="1"/><path d="m17 5 4 14M17 5l2-.5 4 14-2 .5"/></symbol>
+ <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+ <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 4 13 8-13 8z"/></symbol>
+ <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+ <symbol id="i-next" viewBox="0 0 24 24"><path d="m5 5 10 7-10 7zM19 5v14"/></symbol>
+ <symbol id="i-prev" viewBox="0 0 24 24"><path d="m19 5-10 7 10 7zM5 5v14"/></symbol>
+ <symbol id="i-radio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M7 7a7 7 0 0 0 0 10m10-10a7 7 0 0 1 0 10M4 4a11 11 0 0 0 0 16M20 4a11 11 0 0 1 0 16"/></symbol>
+ <symbol id="i-repeat" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4M3 11V8a2 2 0 0 1 2-2h16M7 22l-4-4 4-4m14-1v3a2 2 0 0 1-2 2H3"/></symbol>
+ <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M3 5h3l12 14h3m-4-4 4 4-4 3M3 19h3L18 5h3m-4-3 4 3-4 4"/></symbol>
+ <symbol id="i-volume" viewBox="0 0 24 24"><path d="M4 9h4l5-5v16l-5-5H4zm13-1a7 7 0 0 1 0 8m3-11a11 11 0 0 1 0 14"/></symbol>
+ <symbol id="i-link" viewBox="0 0 24 24"><path d="m10 14 4-4m-5 7-2 2a4 4 0 0 1-6-6l5-5a4 4 0 0 1 6 0m0-1 2-2a4 4 0 0 1 6 6l-5 5a4 4 0 0 1-6 0"/></symbol>
+ <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+ <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+ <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></symbol>
+ <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 8a3 3 0 0 1 6 1c0 2-3 2-3 4m0 3v1"/></symbol>
+ <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+ <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></symbol>
+ <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M6 18a4 4 0 0 1-1-8 7 7 0 0 1 13-1 5 5 0 0 1 0 10H6"/></symbol>
+ <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+ <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+ <symbol id="i-up" viewBox="0 0 24 24"><path d="m6 14 6-6 6 6"/></symbol>
+ <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 10 6 6 6-6"/></symbol>
+</defs></svg>
+<div class="app-shell">
+ <aside class="sidebar" id="sidebar" aria-label="Navegação principal">
+  <a class="brand" href="#inicio" aria-label="4uMusic — início"><img src="assets/icon.svg" alt="" width="36" height="36"><span>4u<span class="brand-light">Music</span><small>BY 4U-LABS</small></span></a>
+  <div class="sidebar-label">SEU UNIVERSO MUSICAL</div>
+  <nav class="main-nav"><button class="nav-item active" data-view="home"><svg><use href="#i-home"/></svg>Início</button><button class="nav-item" data-view="search"><svg><use href="#i-search"/></svg>Buscar músicas</button><button class="nav-item" data-view="favorites"><svg><use href="#i-heart"/></svg>Favoritas<span id="favorite-count" class="nav-count">0</span></button><button class="nav-item" data-view="library"><svg><use href="#i-list"/></svg>Minha biblioteca</button><button class="nav-item" data-view="queue"><svg><use href="#i-list"/></svg>Fila de reprodução</button><button id="sidebar-install" class="nav-item" data-action="install"><svg aria-hidden="true"><use href="#i-download"/></svg><span id="install-label">Instalar</span></button></nav>
+  <div class="sidebar-divider"></div>
+  <div class="sidebar-heading"><span>SUAS PLAYLISTS</span><button class="icon-button" data-action="create-playlist" aria-label="Criar playlist"><svg><use href="#i-plus"/></svg></button></div>
+  <div id="sidebar-playlists" class="sidebar-playlists"></div>
+  <button class="new-playlist" data-action="create-playlist"><svg><use href="#i-plus"/></svg>Criar uma playlist</button>
+  <div class="sidebar-bottom"><div class="save-status"><span class="status-dot"></span><span id="save-status">Salvo neste navegador</span></div><button class="nav-item" data-action="help"><svg><use href="#i-help"/></svg>Ajuda e informações</button><a class="support-link" href="https://www.paypal.com/ncp/payment/L7YRCS984T33N" target="_blank" rel="noopener noreferrer"><svg><use href="#i-heart"/></svg>Apoie o 4uMusic<span>↗</span></a><div class="sidebar-footer">Feito para o seu próximo play.<br><a href="https://4u.ia.br/" target="_blank" rel="noopener noreferrer">4U.IA.BR</a><span>·</span><a href="https://github.com/4u-Labs" target="_blank" rel="noopener noreferrer">GitHub</a></div></div>
+ </aside>
+ <div class="workspace">
+  <header class="topbar"><button class="icon-button mobile-menu" data-action="menu" aria-label="Abrir menu" aria-expanded="false"><svg><use href="#i-menu"/></svg></button><form id="search-form" class="search-box" role="search"><svg><use href="#i-search"/></svg><input id="search-input" type="search" autocomplete="off" maxlength="200" placeholder="Qual é o seu som de hoje?" aria-label="Buscar música, artista ou colar link do YouTube"><kbd>↵</kbd></form><button class="button button-quiet add-link-top" data-action="add-link"><svg><use href="#i-link"/></svg>Colar link</button><button id="account-button" class="account-button" data-action="account"><span class="avatar">G</span><span id="account-label">Entrar com Google</span></button></header>
+  <div class="content-layout">
+   <main id="main" tabindex="-1"><div id="page-content"></div><footer class="main-footer"><span>4uMusic <span class="muted">por Fabiano Braga · 4u-Labs</span></span><div><a href="https://4u.ia.br/" target="_blank" rel="noopener noreferrer">Portal 4U</a><a href="https://github.com/4u-Labs" target="_blank" rel="noopener noreferrer">GitHub</a><a href="tutorial.html">Ajuda</a><a href="privacidade.html">Privacidade</a><a href="termos.html">Termos</a></div></footer></main>
+   <aside class="now-panel" aria-label="Reprodução e fila"><div class="panel-heading"><span>TOCANDO AGORA</span><span class="live-dot"></span></div><div class="video-frame" id="video-frame"><div id="video-placeholder" class="video-placeholder"><div class="placeholder-wave"><i></i><i></i><i></i><i></i><i></i></div><strong>Seu próximo play começa aqui</strong><span>Escolha uma música ou cole um link</span></div><div id="youtube-player"></div></div><div class="youtube-attribution"><span class="yt-mark">▶</span><span class="yt-credit">YouTube <span class="muted">· oficial</span></span><p id="next-track-label" class="next-track-label" aria-live="polite"></p><button id="wake-toggle" class="wake-toggle" data-action="wake-toggle" aria-label="Manter tela ligada enquanto toca" aria-pressed="false" aria-describedby="wake-status"><svg aria-hidden="true"><use href="#i-sun"/></svg><span id="wake-label">Manter tela ligada</span></button><span id="wake-status" class="sr-only" role="status"></span><a id="youtube-source" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="Abrir no YouTube">↗</a></div><div class="now-info"><p id="now-title">O que vamos ouvir?</p><span id="now-artist">A trilha sonora é sua.</span><button id="now-favorite" class="icon-button" data-action="favorite-current" aria-label="Favoritar música atual" disabled><svg><use href="#i-heart"/></svg></button></div><div id="player-message" class="player-message" role="status"></div><div class="queue-heading"><h2>Próximas na fila <span id="queue-count">0</span></h2><button class="text-button" data-action="clear-queue">Limpar</button></div><div id="queue-list" class="queue-list"></div><button class="queue-add" data-action="add-link"><svg><use href="#i-plus"/></svg>Adicionar por link</button><p class="panel-note">O YouTube cuida da reprodução e dos anúncios. <button class="text-button" data-action="premium-info">Como funciona o Premium?</button></p></aside>
+  </div>
+  <nav class="mobile-nav" aria-label="Atalhos de navegação"><button data-view="home" aria-label="Início" title="Início"><svg aria-hidden="true"><use href="#i-home"/></svg></button><button data-view="search" aria-label="Buscar" title="Buscar"><svg aria-hidden="true"><use href="#i-search"/></svg></button><button data-view="favorites" aria-label="Favoritas" title="Favoritas"><svg aria-hidden="true"><use href="#i-heart"/></svg></button><button data-view="library" aria-label="Biblioteca" title="Biblioteca"><svg aria-hidden="true"><use href="#i-library"/></svg></button><button data-view="queue" aria-label="Fila" title="Fila"><svg aria-hidden="true"><use href="#i-list"/></svg></button></nav>
+ </div>
+</div>
+<section class="player-bar" aria-label="Controles de reprodução"><div class="bar-track"><button id="bar-art" class="bar-art" data-action="show-player" aria-label="Mostrar fila de reprodução"><svg><use href="#i-list"/></svg></button><div><strong id="bar-title">Encontre seu próximo som</strong><span id="bar-artist">4uMusic · Seu som, seu espaço</span></div><button id="bar-favorite" class="icon-button" data-action="favorite-current" aria-label="Favoritar música atual" disabled><svg><use href="#i-heart"/></svg></button></div><div class="transport"><div class="transport-buttons"><button id="shuffle-button" class="icon-button active" data-action="shuffle" aria-label="Ordem aleatória sem repetir" aria-pressed="true"><svg><use href="#i-shuffle"/></svg></button><button class="icon-button" data-action="previous" aria-label="Música anterior"><svg><use href="#i-prev"/></svg></button><button id="play-button" class="play-main" data-action="toggle-play" aria-label="Reproduzir"><svg><use href="#i-play"/></svg></button><button class="icon-button" data-action="next" aria-label="Próxima música"><svg><use href="#i-next"/></svg></button><button id="repeat-button" class="icon-button active" data-action="autoplay" aria-label="Continuar com músicas semelhantes" aria-pressed="true"><svg><use href="#i-radio"/></svg></button></div><div class="progress-row"><span id="elapsed">0:00</span><input id="seek" type="range" min="0" max="100" value="0" aria-label="Posição da reprodução" disabled><span id="duration">0:00</span></div></div><div class="volume-controls"><button class="icon-button" data-action="show-player" aria-label="Mostrar fila de reprodução"><svg><use href="#i-list"/></svg></button><button id="mute-button" class="icon-button" data-action="mute" aria-label="Silenciar" aria-pressed="false"><svg><use href="#i-volume"/></svg></button><input id="volume" type="range" min="0" max="100" value="70" aria-label="Volume"></div></section>
+<dialog id="modal" aria-labelledby="modal-title"><div class="modal-top"><span class="eyebrow">4UMUSIC</span><button class="icon-button" data-action="close-modal" aria-label="Fechar"><svg><use href="#i-close"/></svg></button></div><h2 id="modal-title"></h2><div id="modal-body"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div><input type="file" id="import-file" accept="application/json,.json" hidden>
+	<script type="module" src="app.js?v=20261013-8"></script>
+</body></html>
